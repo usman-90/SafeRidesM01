@@ -1,18 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import MyDrawer from './src/navigation/DrawerNavigator';
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import RootStack from './src/navigation/StackNavigator';
 
 export default function App() {
-  return (
-      <MyDrawer />
-  );
+    return (
+        <SafeAreaView style={styles.container}>
+            <NavigationContainer>
+                <RootStack />
+            </NavigationContainer>
+        </SafeAreaView >
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: 'pink',
+    },
 });
