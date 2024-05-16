@@ -6,6 +6,7 @@ import History from "../screens/History.js";
 import AboutUs from "../screens/AboutUs.js";
 import Share from "../screens/Share.js";
 import Login from "../screens/Login.js";
+import ProfileSettings from "../screens/ProfileSettings.js";
 
 const MainStack = () => {
   const MainStack = createStackNavigator();
@@ -57,6 +58,11 @@ const RootStack = () => {
       <RootStack.Screen
         name="Login"
         component={Login}
+        options={{ headerShown: false }}
+      />
+        <RootStack.Screen
+        name="Profile"
+        component={ProfileSettings}
         options={{ headerShown: false }}
       />
     </RootStack.Navigator>

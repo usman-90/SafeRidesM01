@@ -6,7 +6,7 @@ import {
 import { Image, Text, View } from "react-native";
 import Home from '../screens/Home'
 import { GlobalStyles } from "../../GlobalStyles";
-import { CameraIcon, ClockIcon, Cog8ToothIcon, ExclamationTriangleIcon, InformationCircleIcon, ShareIcon, StarIcon, WalletIcon } from 'react-native-heroicons/solid'
+import { CameraIcon, ClockIcon, Cog8ToothIcon, ExclamationTriangleIcon, InformationCircleIcon, ShareIcon, StarIcon, WalletIcon , UserIcon} from 'react-native-heroicons/solid'
 
 const CustomDrawerContent = (props) => {
     return (
@@ -78,6 +78,13 @@ const CustomDrawerContent = (props) => {
                     <ExclamationTriangleIcon style={[GlobalStyles.marginLeft_5]} color={"#00BFF3"} />
                 )}
                 onPress={() => props.navigation.navigate("Login")}
+            />
+             <DrawerItem
+                label="Profile"
+                icon={({ focused, color, size }) => (
+                    <UserIcon style={[GlobalStyles.marginLeft_5]} color={"#00BFF3"} />
+                )}
+                onPress={() => props.navigation.navigate("Profile")}
             />
         </DrawerContentScrollView>
     );
