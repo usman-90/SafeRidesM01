@@ -25,11 +25,11 @@ import {
 
   
   export default function PaymentMethods() {
-    const [pickupLocation, setPickupLocation] = useState('');
-    const [dropOffLocation, setDropOffLocation] = useState('');
-    const [money, setMoney] = useState('');
-    const [date, setDate] = useState('');
-    const [time, setTime] = useState('2221-0057-4680-2089');
+    const [nickName ,setNickName] = useState('');
+    const [cardNumber, setCardNumber] = useState('');
+    const [cardHolderName, setCardHolderName] = useState('');
+    const [valid, setValid] = useState('');
+    const [securityCode, setSecurityCode] = useState('2221-0057-4680-2089');
     const navigation = useNavigation();
     const goBack=()=>{
         navigation.navigate('Root')
@@ -61,8 +61,8 @@ import {
               <PencilIcon color="#00BFF3" size={17}/>
               <TextInput
                 style={styles.TextInputEdit}
-                value={date}
-                onChangeText={setDate}
+                value={nickName}
+                onChangeText={setNickName}
                 placeholder='Put nick name to this cardd'
               />
             </View>
@@ -72,8 +72,8 @@ import {
               <TextInput
                 style={styles.TextInputEdit}
                 placeholder='Card number heer'
-                value={time}
-                onChangeText={setTime}
+                value={cardNumber}
+                onChangeText={setCardNumber}
               />
             </View>
             <Text style={styles.Labels}>Card Holder Name</Text>
@@ -81,8 +81,8 @@ import {
               <PencilIcon color="#00BFF3" size={17} />
               <TextInput
                 style={styles.TextInputEdit}
-                value={dropOffLocation}
-                onChangeText={setDropOffLocation}
+                value={cardHolderName}
+                onChangeText={setCardHolderName}
                 placeholder='Put Holder name here'
               />
             </View>
@@ -92,8 +92,8 @@ import {
               <TextInput
                 style={styles.TextInputEdit}
                 placeholder='27/8'
-                value={pickupLocation}
-                onChangeText={setPickupLocation}
+                value={valid}
+                onChangeText={setValid}
               />
             </View>
 
@@ -103,8 +103,8 @@ import {
               <TextInput
               placeholder='000 '
                 style={styles.TextInputEdit}
-                value={money}
-                onChangeText={setMoney}
+                value={securityCode}
+                onChangeText={setSecurityCode}
               />
             </View>
 
